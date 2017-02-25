@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+<style>
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  grid-template-rows: 150px auto 100px;
+  grid-template-columns: minmax(200px, 3fr) 9fr;
+  grid-template-areas: "header header"
+                      "nav    content"
+                      "nav    footer";
+}
+
+body > header,
+body > nav,
+body > main,
+body > footer{
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+	font-size: xx-large;
+	font-family: sans-serif;
+}
+
+header {
+  background-color: red;
+  grid-area: header;
+}
+nav {
+  background-color: yellow;
+  grid-area: nav;
+}
+main {
+  background-color: lime;
+}
+footer {
+  background-color: cyan;
+}
+</style>
+</head>
+<body>
+  <header>Header</header>
+  <nav>Nav</nav>
+  <main>Main</main>
+  <footer>Footer</footer>
+</body>
